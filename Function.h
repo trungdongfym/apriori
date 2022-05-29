@@ -7,7 +7,7 @@ using namespace std;
 
 const double MIN_SUPPORT = 0.006;//The smaller it is, the longer it takes to run
 const double MIN_CONFIDENCE = 0.4;//The larger the number, the smaller the number of rules
-const int MAX_LEN_RULE = 100;
+const int MAX_LEN_RULE = 2;
 
 void Function()
 {

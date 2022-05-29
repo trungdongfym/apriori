@@ -4,6 +4,8 @@
 #include <algorithm>
 #include <iterator>
 #include <set>
+#include <cmath>
+#include <iomanip>
 using namespace std;
 
 map<vector<string>,int> invalidItemSet;
@@ -186,7 +188,7 @@ void generate_Rules(vector<map<vector<string>,int> > listFrequentItemset,double 
    listFrequentItemset.pop_back();
    int totalRule = 0;
    cout<<"===========KET QUA===========\n";
-   cout<<"X\t\t"<<"Y\t"<<"CONFIDENCE\t\t"<<"SUPPORT\n";
+   // cout<<"X\t\t"<<"Y\t"<<"CONFIDENCE\t\t"<<"SUPPORT\n";
    // show(lastFreItemset);
    for(int i = 0; i < listFrequentItemset.size(); i++){
       for(
@@ -209,11 +211,12 @@ void generate_Rules(vector<map<vector<string>,int> > listFrequentItemset,double 
                if(conf>=MIN_CONFIDENCE){
                   totalRule++;
                   showVectorRule(x);
-                  cout<<"   =>  ";
+                  cout<<"   ->  ";
                   showVectorRule(y);
-                  cout<<"\t"<<conf;
-                  cout<<"\t"<<double((double)last_sup/(double)totalTransaction);
-                  cout<<"\n";
+                  cout<<" (";
+                  cout<<"conf: "<< fixed << setprecision(3) <<conf<<", ";
+                  cout<<"supp: "<<fixed << setprecision(3)<<double((double)last_sup/(double)totalTransaction);
+                  cout<<")\n";
                }
             }
          }

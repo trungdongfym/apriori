@@ -120,12 +120,12 @@ vector<vector<int> > generateCombination(int n, int k)
 }
 
 void showVectorRule(vector<string> x){
-   cout<<"[";
+   cout<<"{";
    for(int i=0;i<x.size();i++){
       if(x[i]!=x[x.size()-1]){
          cout<<x[i]<<", ";
       }else{
-         cout<<x[i]<<"]";
+         cout<<x[i]<<"}";
       }
    }
 }

@@ -68,12 +68,14 @@ int main()
 	a.erase(a.begin()+0);
 	// showVector(a);
    // showVector(subVector(a,b));
-	vector<vector<int> > t = generateCombination(5,3);
-	for(int i=0;i<t.size();i++){
-		for(int j=0;j<t[i].size();j++){
-			cout<<t[i][j]<<" ";
-		}
-		cout<<"\n";
-	}
+	// vector<vector<int> > t = generateCombination(5,3);
+	// for(int i=0;i<t.size();i++){
+	// 	for(int j=0;j<t[i].size();j++){
+	// 		cout<<t[i][j]<<" ";
+	// 	}
+	// 	cout<<"\n";
+	// }
+   double t = 0.00666578;
+   cout<<fixed<<setprecision(3)<<t;
    return 0;
 }
